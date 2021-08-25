@@ -19479,12 +19479,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_Authenticated_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/Authenticated.vue */ "./resources/js/Layouts/Authenticated.vue");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  components: {
-    Authenticated: _Layouts_Authenticated_vue__WEBPACK_IMPORTED_MODULE_0__.default
-  },
   props: {
     taskCategories: Object,
     errors: Object
+  },
+  components: {
+    Authenticated: _Layouts_Authenticated_vue__WEBPACK_IMPORTED_MODULE_0__.default
   },
   data: function data() {
     return {

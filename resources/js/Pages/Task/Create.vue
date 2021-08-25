@@ -105,12 +105,12 @@
 <script>
 import Authenticated from "@/Layouts/Authenticated.vue";
 export default {
-    components: {
-        Authenticated,
-    },
     props: {
         taskCategories: Object,
         errors: Object,
+    },
+    components: {
+        Authenticated,
     },
     data() {
         return {
