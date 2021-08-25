@@ -50,34 +50,4 @@ class CreateTaskTest extends DuskTestCase
             ->assertSee('Please select any category option');
         });
     }
-
-    public function testCheckNameFieldEmpty()
-    {
-        $task = Task::factory()->make();
-        $this->browse(function (Browser $browser) use ($task) {
-            $browser->loginAs($task->user_id)
-            ->visit('/task/create')
-            ->assertTitle('Laravel')
-            ->type('#name', '')
-            ->select('#category_id', $task->category_id)
-            ->press('Add')
-            ->waitForText('The name field is required')
-            ->assertSee('The name field is required');
-        });
-    }
-
-    public function testCheckCategoryFieldEmpty()
-    {
-        $task = Task::factory()->make();
-        $this->browse(function (Browser $browser) use ($task) {
-            $browser->loginAs($task->user_id)
-            ->visit('/task/create')
-            ->assertTitle('Laravel')
-            ->type('#name', $task->name)
-            ->select('#category_id', '')
-            ->press('Add')
-            ->waitForText('Please select any category option')
-            ->assertSee('Please select any category option');
-        });
-    }
 }
