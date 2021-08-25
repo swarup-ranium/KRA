@@ -26,7 +26,7 @@ class CreateTaskCategoryTest extends DuskTestCase
                     ->press('Add')
                     ->assertDontSee('The name field is required')
                     ->assertDontSee('Whoops! Something went wrong!')
-                    ->assertPathIs('/taskCategory/create')
+                    ->assertPathIs('/taskCategory')
                     ->waitForText('Category added successfully')
                     ->assertSee('Category added successfully');
         });
